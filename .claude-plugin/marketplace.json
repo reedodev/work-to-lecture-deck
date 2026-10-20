@@ -1,0 +1,21 @@
+{
+  "name": "work-to-lecture-deck",
+  "owner": {
+    "name": "Reedo"
+  },
+  "metadata": {
+    "description": "Turn real AI work logs (Claude Code sessions) into a single-file HTML lecture deck with a human/AI swimlane and per-step cards: what I said, what the AI did, what got fixed.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "work-to-lecture-deck",
+      "description": "Turn real AI work logs (Claude Code sessions) into a single-file HTML lecture deck with a human/AI swimlane and per-step cards: what I said, what the AI did, what got fixed.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/work-to-lecture-deck"
+      ]
+    }
+  ]
+}
