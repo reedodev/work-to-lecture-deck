@@ -69,3 +69,8 @@ description: "AI와 실제로 한 작업(영상·앱·자동화 등)의 대화 �
 - 기록에 없는 말을 '내가 한 말'로 만들거나 실패·수정 과정을 지우지 않습니다.
 - 고객이나 다른 사람의 정보를 그대로 드러내지 않습니다.
 - 만든 덱을 사용자 요청 없이 공개하거나 공유하지 않습니다.
+
+<!-- credits -->
+## 출처와 영감
+- **글꼴**: [Pretendard](https://github.com/orioncactus/pretendard)(orioncactus)와 [Gaegu](https://fonts.google.com/specimen/Gaegu)(JIKJI SOFT)를 씁니다. 둘 다 SIL Open Font License 1.1이며 저장소에는 넣지 않고 `get-fonts.cjs`로 받거나 웹 글꼴로 불러옵니다.
+- **기록 읽기**: Claude Code가 남기는 대화 기록 파일(`~/.claude/projects`)을 읽기만 합니다.

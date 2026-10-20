@@ -55,6 +55,12 @@ node skills/work-to-lecture-deck/scripts/build-deck.cjs skills/work-to-lecture-d
 
 `node tests/run.mjs`가 SKILL.md 형식을 검사하고 예시 파일로 스크립트를 실제로 실행합니다. 푸시할 때마다 GitHub Actions가 같은 시험을 돌립니다(위 test 배지).
 
+<!-- credits -->
+## 출처와 영감
+
+- **글꼴**: [Pretendard](https://github.com/orioncactus/pretendard)(orioncactus)와 [Gaegu](https://fonts.google.com/specimen/Gaegu)(JIKJI SOFT)를 씁니다. 둘 다 SIL Open Font License 1.1이며 저장소에는 넣지 않고 `get-fonts.cjs`로 받거나 웹 글꼴로 불러옵니다.
+- **기록 읽기**: Claude Code가 남기는 대화 기록 파일(`~/.claude/projects`)을 읽기만 합니다.
+
 ## 만든 사람
 
 **리도**, AI 좌충우돌 실습 중인 20년차 엔지니어입니다. 매일 AI에게 일을 맡기다가 막힌 부분을 고쳐 가며 이 스킬을 만들었습니다.
@@ -67,5 +73,8 @@ node skills/work-to-lecture-deck/scripts/build-deck.cjs skills/work-to-lecture-d
 ## English
 
 Turn real AI work logs (Claude Code sessions) into a single-file HTML lecture deck with a human/AI swimlane and per-step cards: what I said, what the AI did, what got fixed.
+
+**Credits.**
+- Fonts: [Pretendard](https://github.com/orioncactus/pretendard) and [Gaegu](https://fonts.google.com/specimen/Gaegu) (SIL OFL 1.1), downloaded on demand, not bundled. Reads Claude Code session logs read-only.
 
 Install: `/plugin marketplace add reedodev/work-to-lecture-deck` then `/plugin install work-to-lecture-deck@work-to-lecture-deck`, or copy `skills/work-to-lecture-deck` into `~/.claude/skills/`. See [SKILL.md](skills/work-to-lecture-deck/SKILL.md) for the full procedure. MIT License; third-party models, fonts and libraries keep their own licenses.
