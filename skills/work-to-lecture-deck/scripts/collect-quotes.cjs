@@ -21,6 +21,10 @@ const get = (k, d) => { const i = args.indexOf('--' + k); return i >= 0 ? args[i
 const has = (k) => args.includes('--' + k);
 
 const root = path.join(os.homedir(), '.claude', 'projects');
+if (!fs.existsSync(root)) {
+  console.error('Claude Code 대화 기록 폴더(~/.claude/projects)가 없습니다. Claude Code로 작업한 기록이 이 컴퓨터에 있어야 합니다. (No ~/.claude/projects folder found.)');
+  process.exit(1);
+}
 if (has('list')) {
   for (const n of fs.readdirSync(root)) {
     const files = fs.readdirSync(path.join(root, n)).filter(f => f.endsWith('.jsonl')).length;
@@ -39,6 +43,10 @@ const maxLen = parseInt(get('max', '400'), 10);
 const out = get('out');
 
 const dir = path.join(root, project);
+if (!fs.existsSync(dir)) {
+  console.error('프로젝트 폴더를 찾지 못했습니다: ' + project + ' (이름은 --list 결과와 똑같이 적습니다. Project not found; copy the name from --list.)');
+  process.exit(1);
+}
 const kst = (d) => new Date(d.getTime() + 9 * 3600 * 1000).toISOString().replace('T', ' ').slice(0, 16);
 const rows = [];
 

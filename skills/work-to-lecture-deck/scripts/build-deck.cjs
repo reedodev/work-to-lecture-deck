@@ -16,6 +16,7 @@ const { spawnSync } = require('child_process');
 
 const [, , jsonPath, outPath] = process.argv;
 if (!jsonPath || !outPath) { console.error('사용: node build-deck.cjs deck.json out.html'); process.exit(2); }
+if (!fs.existsSync(jsonPath)) { console.error('deck.json 파일이 없습니다: ' + jsonPath + ' (File not found.)'); process.exit(2); }
 const base = path.dirname(path.resolve(jsonPath));
 const deck = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
 const mime = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.gif': 'image/gif' };
